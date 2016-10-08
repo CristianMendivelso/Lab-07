@@ -17,6 +17,7 @@
 package edu.eci.pdsw.samples.persistence.mybatisimpl.mappers;
 
 import edu.eci.pdsw.samples.entities.Usuario;
+import org.apache.ibatis.annotations.Param;
 
 /**
  *
@@ -24,8 +25,8 @@ import edu.eci.pdsw.samples.entities.Usuario;
  */
 public interface UsuarioMapper {
     
-    public Usuario getUsuario(String email);    
+    public Usuario getUsuario(@Param ("email")String email);    
     
-    public void insertarUsuario(String email,String nombre);
+    public void insertarUsuario( @Param ("email") String email,@Param ("nombre") String nombre);
 
 }
