@@ -17,7 +17,7 @@
     </select>
     
     <insert parameterType="map" id="insertarUsuario" >
-                insert into USUARIOS values (#{p.getEmail} ,#{p.getNombre})
+                insert into USUARIOS values (#{email} ,#{nombre})
 
     </insert>
 
