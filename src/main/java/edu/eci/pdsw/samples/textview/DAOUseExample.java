@@ -40,6 +40,8 @@ public class DAOUseExample {
          * OPERACIONES CON LOS DAO
          */
         System.out.println(daof.getDaoEntradaForo().loadAll());
+        System.out.println("/n");
+        System.out.println("juan.perez@gmail.com"+daof.getDaoUsuario().load("juan.perez@gmail.com").getNombre());
         
         
         daof.commitTransaction();
