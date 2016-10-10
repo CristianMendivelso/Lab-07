@@ -39,6 +39,12 @@
                 INNER JOIN USUARIOS as autor ON autor.email=ef.USUARIOS_email
                 INNER JOIN USUARIOS as autorcom ON autorcom.email=cm.USUARIOS_email
             </select>
+            
+            <insert parameterType="map" id="agregarComentarioAEntradaForo" >
+                insert into COMENTARIOS values (#{c.getId}, #(c.getFechayHora), #(c.getContedido), #{idEntradaForo},#(c.getAutor.getEmail))
+
+            </insert>
+            
     
   	
 </mapper>

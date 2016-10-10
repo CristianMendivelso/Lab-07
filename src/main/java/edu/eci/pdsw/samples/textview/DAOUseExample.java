@@ -43,9 +43,9 @@ public class DAOUseExample {
         System.out.println(daof.getDaoEntradaForo().loadAll());
         System.out.println("/n");
         System.out.println("juan.perez@gmail.com --"+daof.getDaoUsuario().load("juan.perez@gmail.com").getNombre());
-        Usuario p = new Usuario("csa@","cris");
+        Usuario p = new Usuario("chsa@","cris");
         daof.getDaoUsuario().save(p);
-        System.out.println("csa@ --"+daof.getDaoUsuario().load("csa@").getNombre());
+        System.out.println("chsa@ --"+daof.getDaoUsuario().load("chsa@").getNombre());
         daof.commitTransaction();
         daof.endSession();
         
