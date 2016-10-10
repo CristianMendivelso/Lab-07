@@ -41,11 +41,15 @@ public class DAOUseExample {
          * OPERACIONES CON LOS DAO
          */
         System.out.println(daof.getDaoEntradaForo().loadAll());
-        System.out.println("/n");
+        System.out.println("");
+        // Prueba load MyBatisDaoUsuario
         System.out.println("juan.perez@gmail.com --"+daof.getDaoUsuario().load("juan.perez@gmail.com").getNombre());
-        Usuario p = new Usuario("csa@","cris");
+        Usuario p = new Usuario("csa","cris");
+        //Prueba SAve MyBatisDaoUsuario
         daof.getDaoUsuario().save(p);
-        System.out.println("csa@ --"+daof.getDaoUsuario().load("csa@").getNombre());
+        System.out.println("csa--"+daof.getDaoUsuario().load("csa").getNombre());
+        //Prueba load de MyBatisDAoEntradaForo
+        System.out.println("Prueba LOAD  "+daof.getDaoEntradaForo().load(2));
         daof.commitTransaction();
         daof.endSession();
         
