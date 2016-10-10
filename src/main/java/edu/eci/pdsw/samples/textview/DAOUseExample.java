@@ -50,6 +50,8 @@ public class DAOUseExample {
         System.out.println("csa--"+daof.getDaoUsuario().load("csa").getNombre());
         //Prueba load de MyBatisDAoEntradaForo
         System.out.println("Prueba LOAD  "+daof.getDaoEntradaForo().load(2));
+        
+      
         daof.commitTransaction();
         daof.endSession();
         
