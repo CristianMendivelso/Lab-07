@@ -21,7 +21,6 @@ import edu.eci.pdsw.samples.entities.EntradaForo;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-
 /**
  *
  * @author hcadavid
@@ -31,7 +30,7 @@ public interface EntradaForoMapper {
     
     public List<EntradaForo> getEntradasForo();
     
-    public EntradaForo getEntradaForo(int id);
+    public EntradaForo getEntradaForo(@Param ("id") int id);
     
     public void agregarComentarioAEntradaForo( @Param("idEntradaForo") int idEntradaForo, @Param("c")Comentario c);    
     

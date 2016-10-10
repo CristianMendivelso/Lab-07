@@ -39,7 +39,8 @@ public class MyBatisDAOEntradaForo implements DaoEntradaForo{
         
     @Override
     public EntradaForo load(int id) throws PersistenceException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntradaForoMapper pedmp=currentSession.getMapper(EntradaForoMapper.class);
+        return pedmp.getEntradaForo(id);
     }
 
     @Override
